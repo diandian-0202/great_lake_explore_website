@@ -10,21 +10,39 @@ function App() {
     switch (content) {
       case "about":
         return (
-          <div className="content-box">
-            <h2>About Our VR Fishing Experience</h2>
-            <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
-            <p>
-              Immerse yourself in the tranquility of nature with our
-              cutting-edge VR fishing experience. Whether you're a seasoned
-              angler or a complete beginner, our VR platform offers a realistic
-              and serene fishing environment for everyone.
-            </p>
+          <div>
+            <div className="content-box">
+              <h2>Discover the Great Lakes in Virtual Reality</h2>
+              <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
+              <p>
+                Take a trip around the Great Lakes in virtual reality! 
+                Discover local fish, birds and other animals, watch the 
+                seasons change, and experience how the water cycle 
+                affects ecosystems, all in real time. 
+              </p>
+            </div>
+            <div className="content-box">
+              <h2>Immersive and Informative</h2>
+              <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
+              <p>
+                Learning about ecosystems is challenging: there is a lot to 
+                remember, and keeping focused isn’t always easy. Students 
+                spend all day learning through lectures, worksheets and tests, 
+                and keeping their attention is never guaranteed.
+              </p>
+              <p>
+                In the Great Lakes VR experience, everywhere you explore will 
+                present an opportunity for learning. Students’ natural curiosity 
+                will keep them constantly engaged, and they’ll be learning 
+                everything they need to know.
+              </p>
+            </div>
           </div>
         );
 
       case "features":
         return <p></p>;
-      case "cost":
+      case "educators":
         return <p></p>;
       case "blogs":
         return (
@@ -46,7 +64,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Great Lake Fishing</h1>
+        <div class="header-background-panel">
+          <h1>Enhanced Ecology Education</h1>
+        </div>
         <nav>
           <button
             className={`nav-button ${content === "about" ? "active" : ""}`}
@@ -61,10 +81,10 @@ function App() {
             Features
           </button>
           <button
-            className={`nav-button ${content === "cost" ? "active" : ""}`}
-            onClick={() => setContent("cost")}
+            className={`nav-button ${content === "educators" ? "active" : ""}`}
+            onClick={() => setContent("educators")}
           >
-            Cost/Finance
+            Educators
           </button>
           <button
             className={`nav-button ${content === "blogs" ? "active" : ""}`}
