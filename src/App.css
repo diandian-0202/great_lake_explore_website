@@ -33,6 +33,11 @@
   }
 }
 
+p {
+  text-shadow: 
+    1px 1px 1px #000;   
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -114,6 +119,11 @@ header h1 {
   /* transform: translateX(120px); */
 }
 
+h2 {
+  text-shadow: 
+    1.5px 1.5px 1.5px #000;   
+}
+
 header p {
   color: #005f99;
   font-size: 1.2rem;
@@ -129,14 +139,14 @@ header p {
 }
 
 .header-background-panel {
-  background-color: #16557e;  /* Solid background color */
+  background-color: #16547eb6;  /* Solid background color */
   /* padding: 20px;              Space inside the panel
   justify-content: center;  /* Horizontally center */
   transform: translateX(120px);
   padding: 1rem; /* 增加内边距 */
   border-radius: 18px;
   width: 900px; /* 增加框的最大宽度 */
-  height: 150px;
+  height: 125px;
   /* border: 2px solid black; */
   box-shadow: 
     2px 2px 2px #000;
