@@ -1,6 +1,3 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 40vmin;
@@ -11,12 +8,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  text-align: center;
-  /* background-color: #282c34; */
-  color: white;
 }
 
 .App-link {
@@ -72,7 +63,7 @@ nav {
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  color: #014991; /* 类似灰蓝色 */
+  color: rgba(22, 84, 126, 1); /* 类似灰蓝色 */
   font-size: 1rem; /* 字体大小 */
   font-weight: 500; /* 中等粗细 */
   text-align: center;
@@ -86,36 +77,26 @@ nav {
 
 .nav-button:hover,
 .nav-button.active {
-  background-color: #006bb3; /* Slightly darker blue for active */
+  background-color: rgba(22, 84, 126, 1);; /* Slightly darker blue for active */
   color: #ffffff;
 }
 
 /* Main content area with lake background */
 .main-content {
-  margin-left: 220px; /* Space for the sidebar */
+  margin-left: 230px; /* Space for the sidebar */
   padding: 0rem 2rem 2rem 2rem; /* top right bottom left */
   background-size: cover;
   color: #ffffff;
 }
 
-/* Title styling */
 header {
-  text-align: center;
   margin-top: 2rem;
 }
 
-header h1 {
-  color: #f1f1f1;
-  font-size: 3.8rem;
-  padding-top: 0rem; /* 增加顶部内边距 */
-  padding-bottom: 0rem; /* 增加底部内边距 */
-  text-align: center;
-  text-shadow: 
-    2px 2px 2px #000;                   /* Shadow on bottom right */
-    /* -2px -2px 0px #000,                 Shadow on top left */
-    /* 2px -2px 0px #000,                  Shadow on top right */
-    /* -2px 2px 0px #000;                  bottom left */
-  /* transform: translateX(120px); */
+.center-div {
+  display: flex;
+  align-items: center;         /* Vertically center the content */
+  flex-direction: column; 
 }
 
 h2 {
@@ -137,27 +118,18 @@ header p {
   }
 }
 
-.header-background-panel {
-  background-color: #16547eb6;  /* Solid background color */
-  /* padding: 20px;              Space inside the panel
-  justify-content: center;  /* Horizontally center */
-  transform: translateX(120px);
-  padding: 1rem; /* 增加内边距 */
-  border-radius: 18px;
-  width: 900px; /* 增加框的最大宽度 */
-  height: 125px;
-  /* border: 2px solid black; */
-  box-shadow: 
-    2px 2px 2px #000;
-  margin: 0rem auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 轻微阴影效果 */
+h1 {
+  color: #f1f1f1;
+  text-align: center;
+  text-shadow: 
+    2px 2px 2px #000;                   /* Shadow on bottom right */
 }
 
 .content-box {
   background-color: rgba(115, 166, 233, 0.5); /* 半透明白色背景 */
   padding: 1rem; /* 增加内边距 */
   border-radius: 18px;
-  max-width: 1001px; /* 增加框的最大宽度 */
+  max-width: 1000px; /* 增加框的最大宽度 */
   height: 500px;
   margin: 2rem auto;
   text-align: center;
@@ -177,8 +149,3 @@ header p {
   margin-top: 1rem;
 }
 
-html,
-body {
-  height: 100%;
-  overflow-y: auto; /* 确保可以垂直滚动 */
-}

@@ -1,16 +1,48 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import React, { useState } from "react";
 import "./App.css";
 
 function App() {
   const [content, setContent] = useState("about"); // Default content
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  const scrollThreshold = 20;
 
-  // Function to render content based on selected tag
+  const handleScroll = (e) => {
+      const { scrollTop, scrollHeight, clientHeight } = e.target;
+      const position = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      const adjustedPosition = Math.min(position / scrollThreshold, 1);
+      setScrollPosition(adjustedPosition);
+  };
+
   const renderContent = () => {
     switch (content) {
       case "about":
         return (
-          <div>
+          <div className="center-div">
+            <div 
+              style={{
+                position: "fixed",
+                backgroundColor: `rgba(22, 84, 126, ${0.714+scrollPosition*(0.981-0.714)})`,
+                borderRadius: `${18-scrollPosition*18}px`,
+                width: `${900+scrollPosition*(1025-900)}px`,
+                height: `${200-scrollPosition*50}px`,
+                boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+                transform: `translateY(${-scrollPosition*100}px)`,
+              }}
+            >
+              <h1 
+                style={{
+                  marginTop: `${55+scrollPosition*25}px`,
+                  fontSize: `${3.8-scrollPosition*(3.8-2)}rem`,
+                }}
+              >
+                Ecology Education Enhanced
+              </h1>
+            </div>
+            <div style={{
+                height: "200px",
+            }}></div>
             <div className="content-box">
               <h2>Discover the Great Lakes in Virtual Reality</h2>
               <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
@@ -62,11 +94,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div class="header-background-panel">
-          <h1>Enhanced Ecology Education</h1>
-        </div>
+    <div
+        className="scrollable-element"
+        style={{
+            height: "100vh",
+            overflowY: "scroll",
+            border: "1px solid #ccc",
+        }}
+        onScroll={handleScroll}
+    >
+      {/* <h2 style={{ position: "fixed", color: "red" }}>
+          Scroll Position: {scrollPosition}px
+      </h2> */}
+      <header>
         <nav>
           <button
             className={`nav-button ${content === "about" ? "active" : ""}`}
@@ -107,7 +147,9 @@ function App() {
         </nav>
       </header>
 
-      <main className="main-content">{renderContent()}</main>
+      <main className="main-content">
+        {renderContent()}
+      </main>
     </div>
   );
 }
