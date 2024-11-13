@@ -24,14 +24,24 @@
 }
 
 p {
+  font-size: 1.5rem;
   text-shadow: 
-    1px 1px 1px #000;   
+    0px 1px 1px #000;   
+}
+
+li {
+  text-align: left;
+  font-size: 1.5rem;
+  text-shadow: 
+    0px 1px 1px #000;   
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-image: url("./assets/fish2.png"); /* 替换成你的背景图片路径 */
+  background-image: url("./assets/2024-04-10-07-47-48-1344x896.jpg");
+  /* background-image: url("./assets/fish2.png"); */
+  /* background-image: url('./assets/depositphotos_261818042-stock-photo-small-island-in-the-gulf.webp'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +73,6 @@ nav {
   justify-content: center;
   width: 100%;
   padding: 1rem;
-  color: rgba(22, 84, 126, 1); /* 类似灰蓝色 */
   font-size: 1rem; /* 字体大小 */
   font-weight: 500; /* 中等粗细 */
   text-align: center;
@@ -83,7 +92,7 @@ nav {
 
 /* Main content area with lake background */
 .main-content {
-  margin-left: 230px; /* Space for the sidebar */
+  margin-left: 230px; /* Space for the sidebar CRITICAL NUMBER */
   padding: 0rem 2rem 2rem 2rem; /* top right bottom left */
   background-size: cover;
   color: #ffffff;
@@ -99,13 +108,29 @@ header {
   flex-direction: column; 
 }
 
+.animal-container {
+  width: 100%;
+  height: 75px;
+  position: relative
+}
+
+.bird {
+  position: absolute;
+  width: 100px;
+  top: 0;
+}
+
 h2 {
   text-shadow: 
-    1.5px 1.5px 1.5px #000;   
+    0px 2px 2px #000;   
+}
+
+h3 {
+  text-shadow: 
+    0px 1.5px 1.5px #000;   
 }
 
 header p {
-  color: #005f99;
   font-size: 1.2rem;
 }
 /*--------------------------------------------------------------------------------*/
@@ -121,31 +146,98 @@ header p {
 h1 {
   color: #f1f1f1;
   text-align: center;
-  text-shadow: 
-    2px 2px 2px #000;                   /* Shadow on bottom right */
 }
 
 .content-box {
-  background-color: rgba(115, 166, 233, 0.5); /* 半透明白色背景 */
+  background-color: rgb(22, 88, 126);
   padding: 1rem; /* 增加内边距 */
-  border-radius: 18px;
+  border-radius: 10px;
   max-width: 1000px; /* 增加框的最大宽度 */
-  height: 500px;
+  max-height: 700px;
   margin: 2rem auto;
   text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 轻微阴影效果 */
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, .4);
   margin-top: 2rem;
 }
 
-.content-box2 {
-  background-color: rgba(255, 255, 255, 1); /* 半透明白色背景 */
-  padding: 3rem; /* 增加内边距 */
-  border-radius: 18px;
-  max-width: 2001px; /* 增加框的最大宽度 */
-  height: 1000px;
-  margin: 2rem auto;
-  text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 轻微阴影效果 */
-  margin-top: 1rem;
+.dev-blog-header {
+  text-align: left;
+  padding-left: 20px;
 }
 
+.dev-blog-text {
+  text-align: left;
+  font-size: 1rem
+}
+
+.normal-image {
+  width: 100%;
+}
+
+/* --------------------------- educator section styling below ---------------------------- */
+
+.educator-grid {
+  /* gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 10px; /* Space between the panels */
+  width: 100%; /* Full width */
+}
+
+.educator-panel {
+  background-color: lightblue; /* Background color for panels */
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc; /* Optional border */
+}
+
+/* ----------------------------- team section styling below ------------------------------ */
+
+/* Style for the grid container */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between items */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for individual profile card */
+.profile-card {
+  background: rgb(22, 88, 126);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, .3);
+}
+
+.profile-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.profile-card .profile-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.5em;
+}
+
+.profile-card p {
+  font-size: 1em;
+}
+
+/* Hover effect for profile cards */
+.profile-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, .7);
+}
