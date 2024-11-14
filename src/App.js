@@ -1,6 +1,7 @@
 // import logo from "./logo.svg";
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Title from './components/Title';
 
 function App() {
   const [content, setContent] = useState("about"); // Default content
@@ -28,28 +29,7 @@ function App() {
       case "about":
         return (
           <div className="center-div">
-            <div 
-              style={{
-                position: "fixed",
-                borderRadius: `${(1-scrollPositionHeader)*80}px`,
-                // width: `${900+scrollPositionHeader*(1030-900)}px`,
-                width: `calc(${83+scrollPositionHeader*(98-83)}% - ${leftMargin}px)`,
-                height: `${200-scrollPositionHeader*50}px`,
-                boxShadow: `0px 4px 8px rgba(0, 0, 0, ${scrollPositionHeader*0.2})`,
-                transform: `translateY(${-scrollPositionHeader*100}px)`,
-                background: `radial-gradient(circle, rgba(22, 88, 126, ${scrollPositionHeader}) 87%, rgba(255, 255, 255, ${scrollPositionHeader*0}) 95%)`,
-              }}
-            >
-              <h1 
-                style={{
-                  marginTop: `${55+scrollPositionHeader*25}px`,
-                  fontSize: `${3.8-scrollPositionHeader*(3.8-2)}rem`,
-                  textShadow: `0px ${1+2*(1-scrollPositionHeader)}px ${1+2*(1-scrollPositionHeader)}px #000`,
-                }}
-              >
-                Ecology Education Enhanced
-              </h1>
-            </div>
+            <Title/ >
             <div style={{
                 height: "260px",
             }}></div>
@@ -139,10 +119,77 @@ function App() {
         return <p></p>;
       case "educators":
         return (
-          <div class="educator-grid">
-          <div class="content-box">Panel 1</div>
-          <div class="content-box">Panel 2</div>
-          <div class="content-box">Panel 3</div>
+          <div className="center-div">
+            <div 
+              style={{
+                position: "fixed",
+                borderRadius: `${(1-scrollPositionHeader)*80}px`,
+                // width: `${900+scrollPositionHeader*(1030-900)}px`,
+                width: `calc(${83+scrollPositionHeader*(98-83)}% - ${leftMargin}px)`,
+                height: `${200-scrollPositionHeader*50}px`,
+                boxShadow: `0px 4px 8px rgba(0, 0, 0, ${scrollPositionHeader*0.2})`,
+                transform: `translateY(${-scrollPositionHeader*100}px)`,
+                background: `radial-gradient(circle, rgba(22, 88, 126, ${scrollPositionHeader}) 87%, rgba(255, 255, 255, ${scrollPositionHeader*0}) 95%)`,
+              }}
+            >
+              <h1 
+                style={{
+                  marginTop: `${55+scrollPositionHeader*25}px`,
+                  fontSize: `${3.8-scrollPositionHeader*(3.8-2)}rem`,
+                  textShadow: `0px ${1+2*(1-scrollPositionHeader)}px ${1+2*(1-scrollPositionHeader)}px #000`,
+                }}
+              >
+                Educators
+              </h1>
+            </div>
+            <div style={{
+                height: "260px",
+            }}></div>
+            <h1>Purchase</h1>
+            <div class="educator-grid">
+              <div class="content-box">
+                <h2>
+                  Trial
+                </h2>
+                <p> 
+                  Everything you need to test out Great Lakes Explore. $xxx for 1 month.
+                </p>
+                <ul class="educator-list">
+                  <li>Software</li>
+                  <li>1 VR Headset</li>
+                  <li>Sample Lesson Plan</li>
+                </ul>
+              </div>
+              <div class="content-box">
+                <h2>
+                  Annual
+                </h2>
+                <p> 
+                  A recurring plan suitable for any classroom. $xxx annually.
+                </p>
+                <ul class="educator-list">
+                  <li>Software</li>
+                  <li>4 VR Headsets</li>
+                  <li>Complete Lesson Plan</li>
+                  <li>Quiz Questions</li>
+                </ul>
+              </div>
+              <div class="content-box">
+                <h2>
+                  Custom
+                </h2>
+                <p> 
+                  Customize your experience by choosing what you need.
+                  Contact us for more information.
+                </p>
+                <ul class="educator-list">
+                  <li>Software</li>
+                  <li>VR Headsets</li>
+                  <li>Lesson Plans</li>
+                  <li>Quiz Questions</li>
+                </ul>
+              </div>
+          </div>
         </div>
         );
       case "blogs":
@@ -175,7 +222,7 @@ function App() {
         return (
           <div class="profile-grid">
             <div class="profile-card">
-              <img src="/images/JohnOyter.jpg" alt="John Oyer" className="profile-image" style={{
+              <img src="/images/JohnOyter.jpg" alt="John Oyer" class="profile-image" style={{
                 objectPosition: "50% 15%", /* custom shift, particular to image */
               }}/>
               <div class="profile-info">
@@ -185,7 +232,7 @@ function App() {
             </div>
 
             <div class="profile-card">
-              <img src="/images/emerson-hodder.jpg" alt="Emerson Hodder" className="profile-image"/>
+              <img src="/images/emerson-hodder.jpg" alt="Emerson Hodder" class="profile-image"/>
               <div class="profile-info">
                 <h3>Emerson Hodder</h3>
                 <p>Developer</p>
@@ -193,7 +240,7 @@ function App() {
             </div>
 
             <div class="profile-card">
-              <img src="/images/donghua-zhang.jpg" alt="DongHua Zhang" className="profile-image" style={{
+              <img src="/images/donghua-zhang.jpg" alt="DongHua Zhang" class="profile-image" style={{
                 objectPosition: "50% 30%", /* custom shift, particular to image */
               }}/>
               <div class="profile-info">
@@ -203,7 +250,7 @@ function App() {
             </div>
 
             <div class="profile-card">
-              <img src="/images/JohnOyter.jpg" alt="YiHao Geng" className="profile-image"/>
+              <img src="/images/JohnOyter.jpg" alt="YiHao Geng" class="profile-image"/>
               <div class="profile-info">
                 <h3>YiHao Geng</h3>
                 <p>Developer</p>

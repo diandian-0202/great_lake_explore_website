@@ -146,6 +146,8 @@ header p {
 h1 {
   color: #f1f1f1;
   text-align: center;
+  font-size: 3.8rem;
+  text-shadow: 0px 3px 3px #000;
 }
 
 .content-box {
@@ -188,12 +190,24 @@ h1 {
   width: 100%; /* Full width */
 }
 
-.educator-panel {
-  background-color: lightblue; /* Background color for panels */
+.educator-list {
+  list-style-type: square;
+}
+
+.educator-list li {
+  font-size: 1rem;
+}
+
+.educator-grid .content-box p {
+  font-size: 1rem;
+}
+
+/* .educator-panel {
+  background-color: lightblue;
   padding: 20px;
   text-align: center;
-  border: 1px solid #ccc; /* Optional border */
-}
+  border: 1px solid #ccc;
+} */
 
 /* ----------------------------- team section styling below ------------------------------ */
 
