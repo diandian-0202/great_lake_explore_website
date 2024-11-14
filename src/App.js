@@ -2,6 +2,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Title from './components/Title';
+import Credits from './components/Credits';
+import Team from './components/Team';
+import Blogs from './components/Blogs';
+import Educators from './components/Educators';
+import Main from './components/Main';
 
 function App() {
   const [content, setContent] = useState("about"); // Default content
@@ -19,247 +24,25 @@ function App() {
       setscrollPositionGlobal(scrollTop);
   };
 
-  useEffect(() => { // may need to rework this
-    setscrollPositionHeader(0);
-    setscrollPositionGlobal(0);
-  }, [content]);
+  // useEffect(() => { // may need to rework this
+  //   setscrollPositionHeader(0);
+  //   setscrollPositionGlobal(0);
+  // }, [content]);
 
   const renderContent = () => {
     switch (content) {
       case "about":
-        return (
-          <div className="center-div">
-            <Title scrollPositionHeader={scrollPositionHeader} text="Ecology Education Enhanced"/>
-            <div className="content-box">
-              <h2>Discover the Great Lakes in Virtual Reality</h2>
-              <div style={{ 
-                display: 'grid', 
-                margin: '0 auto',
-                gridTemplateColumns: 'repeat(2, .5fr)', 
-                gap: '20px',
-                width: '65%',
-              }}>
-                <img src="/images/vr-headset.png" alt="Description.." className="normal-image"/>
-                <img src="/images/Great-Lakes.png" alt="Description.." className="normal-image"
-                  style={{ 
-                    paddingTop: '50px',
-                  }}
-                />
-              </div>
-              <p>
-                Take a trip around the Great Lakes in virtual reality! 
-                Discover local fish, birds and other animals, watch the 
-                seasons change, and experience how the water cycle 
-                affects ecosystems, all in real time. 
-              </p>
-            </div>
-            <div className="animal-container">
-              <img src="/images/bird/bird-main.png" alt="1" className="bird" style={{
-                left: `${(1.4*scrollPositionGlobal-400)%900}px`,
-              }}/>
-              <img src="/images/bird/bird-wing-1.png" alt="2" className="bird" style={{
-                top: `${-9+Math.sin(scrollPositionGlobal/50)*10}px`,
-                transform: `scaleY(${Math.sin(scrollPositionGlobal/50)})`,
-                left: `${(1.4*scrollPositionGlobal-400)%900}px`,
-              }}/>
-              <img src="/images/bird/bird-wing-2.png" alt="3" className="bird" style={{
-                top: `${-8-Math.sin(scrollPositionGlobal/50)*7}px`,
-                transform: `scaleY(-${Math.sin(scrollPositionGlobal/50)})`,
-                left: `${(1.4*scrollPositionGlobal-400)%900}px`,              
-              }}/>
-            </div>
-            <div className="content-box">
-              <h2>Immersive and Informative</h2>
-              <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
-              <p>
-                Learning about ecosystems is challenging: there is a lot to 
-                remember, and keeping focused isn’t always easy. Students 
-                spend all day learning through lectures, worksheets and tests, 
-                and keeping their attention is never guaranteed.
-              </p>
-              <p>
-                In the Great Lakes VR experience, everywhere you explore will 
-                present an opportunity for learning. Students’ natural curiosity 
-                will keep them constantly engaged, and they’ll be learning 
-                everything they need to know.
-              </p>
-            </div>
-            <div className="animal-container">
-              <img src="/images/fish.png" alt="1" className="bird" style={{
-                transform: `scaleX(-1) 
-                            skew(${Math.sin(scrollPositionGlobal/50)*15}deg, ${Math.sin(scrollPositionGlobal/50)*10}deg) 
-                            rotate(${Math.cos(scrollPositionGlobal/50)*20}deg) `,
-                top: `${-10+Math.sin(scrollPositionGlobal/50)*30}px`,
-                right: `${((1.4*scrollPositionGlobal-330)%900 + 900) % 900}px`,
-              }}/>
-            </div>
-            <div className="content-box">
-              <h2>Immersive and Informative</h2>
-              <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
-              <p>
-                Learning about ecosystems is challenging: there is a lot to 
-                remember, and keeping focused isn’t always easy. Students 
-                spend all day learning through lectures, worksheets and tests, 
-                and keeping their attention is never guaranteed.
-              </p>
-              <p>
-                In the Great Lakes VR experience, everywhere you explore will 
-                present an opportunity for learning. Students’ natural curiosity 
-                will keep them constantly engaged, and they’ll be learning 
-                everything they need to know.
-              </p>
-            </div>
-          </div>
-        );
-
+        return <Main scrollPositionHeader={scrollPositionHeader} scrollPositionGlobal={scrollPositionGlobal}/>
       case "features":
         return <p></p>;
       case "educators":
-        return (
-          <div className="center-div">
-            <Title scrollPositionHeader={scrollPositionHeader} text="Educators"/>
-            <h1>Purchase</h1>
-            <div class="educator-grid">
-              <div class="content-box">
-                <h2>
-                  Trial
-                </h2>
-                <p> 
-                  Everything you need to test out Great Lakes Explore. $xxx for 1 month.
-                </p>
-                <ul class="educator-list">
-                  <li>Software</li>
-                  <li>1 VR Headset</li>
-                  <li>Sample Lesson Plan</li>
-                </ul>
-              </div>
-              <div class="content-box">
-                <h2>
-                  Annual
-                </h2>
-                <p> 
-                  A recurring plan suitable for any classroom. $xxx annually.
-                </p>
-                <ul class="educator-list">
-                  <li>Software</li>
-                  <li>4 VR Headsets</li>
-                  <li>Complete Lesson Plan</li>
-                  <li>Quiz Questions</li>
-                </ul>
-              </div>
-              <div class="content-box">
-                <h2>
-                  Custom
-                </h2>
-                <p> 
-                  Customize your experience by choosing what you need.
-                  Contact us for more information.
-                </p>
-                <ul class="educator-list">
-                  <li>Software</li>
-                  <li>VR Headsets</li>
-                  <li>Lesson Plans</li>
-                  <li>Quiz Questions</li>
-                </ul>
-              </div>
-          </div>
-        </div>
-        );
-      case "blogs":
-        return (
-          <div>
-            <div className="content-box">
-              <h2 className="dev-blog-header">Dev Blog 11/6 - 11/13: First Week</h2>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/hhkCj4we0bE?si=6PIzMmrsmL1iW4kX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p className="dev-blog-text">
-                In our first week, our goals were to define a clear objective for the 
-                project, and to make significant progress on the fishing element of the 
-                game so that users would have a clear idea of how the game would look 
-                and feel.
-              </p>
-              <p className="dev-blog-text">
-                We developed the plan to make the game education-focused and for 
-                the user to progress in the game by unlocking different animals 
-                and discovering their place in the food chain. We also planned for 
-                more passive learning to occur through the changing of the seasons 
-                and through experiencing the water cycle.
-              </p>
-              <p className="dev-blog-text">
-                During the week, we designed the outline the of the landscape, added fishing 
-                mechanics to the world, and created a boat that the user can ride.
-              </p>
-            </div>
-          </div>
-        );
+        return <Educators scrollPositionHeader={scrollPositionHeader}/>
+      case "blogs": 
+        return <Blogs scrollPositionHeader={scrollPositionHeader}/>
       case "team":
-        return (
-          <div class="profile-grid">
-            <div class="profile-card">
-              <img src="/images/JohnOyter.jpg" alt="John Oyer" class="profile-image" style={{
-                objectPosition: "50% 15%", /* custom shift, particular to image */
-              }}/>
-              <div class="profile-info">
-                <h3>John Oyer</h3>
-                <p>Developer</p>
-              </div>
-            </div>
-
-            <div class="profile-card">
-              <img src="/images/emerson-hodder.jpg" alt="Emerson Hodder" class="profile-image"/>
-              <div class="profile-info">
-                <h3>Emerson Hodder</h3>
-                <p>Developer</p>
-              </div>
-            </div>
-
-            <div class="profile-card">
-              <img src="/images/donghua-zhang.jpg" alt="DongHua Zhang" class="profile-image" style={{
-                objectPosition: "50% 30%", /* custom shift, particular to image */
-              }}/>
-              <div class="profile-info">
-                <h3>DongHua Zhang</h3>
-                <p>Developer</p>
-              </div>
-            </div>
-
-            <div class="profile-card">
-              <img src="/images/JohnOyter.jpg" alt="YiHao Geng" class="profile-image"/>
-              <div class="profile-info">
-                <h3>YiHao Geng</h3>
-                <p>Developer</p>
-              </div>
-            </div>
-          </div>
-        )
+        return <Team scrollPositionHeader={scrollPositionHeader}/>
       case "credits":
-        return (
-          <div>
-            <div className="content-box" 
-            // style={{
-            //   backgroundColor: "rgba(0,0,0,0)" 
-            // }}>
-            >
-              <h2>Credits</h2>
-              <ul>
-                <li>        
-                  Headset Icon: <a href="https://www.flaticon.com/free-icons/headset" title="headset icons">Headset icons created by Kharisma - Flaticon</a>
-                </li>
-                <li>        
-                Great Lakes Image: https://aroundmichigan.com/wp-content/uploads/2023/02/Great-Lakes.png
-                </li>
-                <li>        
-                Background Image: <a href="https://pixnio.com/media/water-texture-surface-wave-fluid">Photo</a> by <a href="https://pixnio.com/author/23ohanzee23">Drazen Nesic</a> on <a href="https://pixnio.com/">Pixnio</a>
-                </li>
-                <li>        
-                  Fish Icon: <a href="https://www.flaticon.com/free-icons/fish" title="fish icons">Fish icons created by PLANBSTUDIO - Flaticon</a>
-                </li>
-                <li>        
-                  Headset Icon: <a href="https://www.flaticon.com/free-icons/headset" title="headset icons">Headset icons created by Kharisma - Flaticon</a>
-                </li>
-              </ul>
-            </div>;
-          </div>
-        )
+        return <Credits scrollPositionHeader={scrollPositionHeader}/>
       default:
         return <p></p>
     }
@@ -278,7 +61,7 @@ function App() {
       {/* <h2 style={{ position: "fixed", color: "red" }}>
           Scroll Position: {scrollPositionGlobal}px
       </h2> */}
-      <header>
+      {/* <header> */}
         <nav>
           <button
             className={`nav-button ${content === "about" ? "active" : ""}`}
@@ -317,7 +100,7 @@ function App() {
             Credits
           </button>
         </nav>
-      </header>
+      {/* </header> */}
 
       <main className="main-content">
         {renderContent()}

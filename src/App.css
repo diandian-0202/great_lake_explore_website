@@ -40,8 +40,6 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("./assets/2024-04-10-07-47-48-1344x896.jpg");
-  /* background-image: url("./assets/fish2.png"); */
-  /* background-image: url('./assets/depositphotos_261818042-stock-photo-small-island-in-the-gulf.webp'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,19 +90,15 @@ nav {
 
 /* Main content area with lake background */
 .main-content {
-  margin-left: 230px; /* Space for the sidebar CRITICAL NUMBER */
-  padding: 0rem 2rem 2rem 2rem; /* top right bottom left */
+  margin-left: 18vw; /* Space for the sidebar CRITICAL NUMBER */
+  /* padding: 0rem 2rem 2rem 2rem; top right bottom left */
   background-size: cover;
   color: #ffffff;
 }
 
-header {
-  margin-top: 2rem;
-}
-
 .center-div {
   display: flex;
-  align-items: center;         /* Vertically center the content */
+  align-items: center;         /* center the content */
   flex-direction: column; 
 }
 
@@ -152,11 +146,11 @@ h1 {
 
 .content-box {
   background-color: rgb(22, 88, 126);
-  padding: 1rem; /* 增加内边距 */
   border-radius: 10px;
   max-width: 1000px; /* 增加框的最大宽度 */
   max-height: 700px;
-  margin: 2rem auto;
+  margin: 2rem;
+  padding: 2rem;
   text-align: center;
   box-shadow: 0px 0px 25px rgba(255, 255, 255, .4);
   margin-top: 2rem;
