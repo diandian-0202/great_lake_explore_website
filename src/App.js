@@ -7,6 +7,7 @@ import Blogs from './components/Blogs';
 import Educators from './components/Educators';
 import Main from './components/Main';
 import Features from './components/Features';
+import VRvideo from './components/VRvideo';
 
 function App() {
   const [content, setContent] = useState("about"); // Default content
@@ -22,6 +23,9 @@ function App() {
       const adjustedPosition = Math.min(hundredPosition / scrollThreshold, 1);
       setscrollPositionHeader(adjustedPosition);
       setscrollPositionGlobal(scrollTop);
+      if (scrollTop > 930 && content === "features") {
+        setContent("VRvideo"); // Change to Educators when scroll position exceeds 930
+      }
   };
 
   // useEffect(() => { // may need to rework this
@@ -43,6 +47,8 @@ function App() {
         return <Team scrollPositionHeader={scrollPositionHeader}/>
       case "credits":
         return <Credits scrollPositionHeader={scrollPositionHeader}/>
+      case "VRvideo":  // New case for the clean page
+        return <VRvideo />;  // Render the CleanPage component
       default:
         return <p></p>
     }
@@ -58,10 +64,10 @@ function App() {
         }}
         onScroll={handleScroll}
     >
-      {/* <h2 style={{ position: "fixed", color: "red" }}>
+      <h2 style={{ position: "fixed", color: "red" }}>
           Scroll Position: {scrollPositionGlobal}px
-      </h2> */}
-      <nav>
+      </h2>
+      {content !== "VRvideo" && (<nav>
         <button
           className={`nav-button ${content === "about" ? "active" : ""}`}
           onClick={() => setContent("about")}
@@ -98,7 +104,7 @@ function App() {
         >
           Credits
         </button>
-      </nav>
+      </nav>)}
 
       <main className="main-content">
         {renderContent()}
