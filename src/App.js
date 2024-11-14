@@ -1,12 +1,12 @@
 // import logo from "./logo.svg";
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Title from './components/Title';
 import Credits from './components/Credits';
 import Team from './components/Team';
 import Blogs from './components/Blogs';
 import Educators from './components/Educators';
 import Main from './components/Main';
+import Features from './components/Features';
 
 function App() {
   const [content, setContent] = useState("about"); // Default content
@@ -34,7 +34,7 @@ function App() {
       case "about":
         return <Main scrollPositionHeader={scrollPositionHeader} scrollPositionGlobal={scrollPositionGlobal}/>
       case "features":
-        return <p></p>;
+        return <Features scrollPositionHeader={scrollPositionHeader} scrollPositionGlobal={scrollPositionGlobal}/>;
       case "educators":
         return <Educators scrollPositionHeader={scrollPositionHeader}/>
       case "blogs": 
