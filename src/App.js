@@ -61,46 +61,44 @@ function App() {
       {/* <h2 style={{ position: "fixed", color: "red" }}>
           Scroll Position: {scrollPositionGlobal}px
       </h2> */}
-      {/* <header> */}
-        <nav>
-          <button
-            className={`nav-button ${content === "about" ? "active" : ""}`}
-            onClick={() => setContent("about")}
-          >
-            About
-          </button>
-          <button
-            className={`nav-button ${content === "educators" ? "active" : ""}`}
-            onClick={() => setContent("educators")}
-          >
-            Educators
-          </button>
-          <button
-            className={`nav-button ${content === "features" ? "active" : ""}`}
-            onClick={() => setContent("features")}
-          >
-            Features
-          </button>
-          <button
-            className={`nav-button ${content === "blogs" ? "active" : ""}`}
-            onClick={() => setContent("blogs")}
-          >
-            Dev Blogs
-          </button>
-          <button
-            className={`nav-button ${content === "team" ? "active" : ""}`}
-            onClick={() => setContent("team")}
-          >
-            Team
-          </button>
-          <button
-            className={`nav-button ${content === "credits" ? "active" : ""}`}
-            onClick={() => setContent("credits")}
-          >
-            Credits
-          </button>
-        </nav>
-      {/* </header> */}
+      <nav>
+        <button
+          className={`nav-button ${content === "about" ? "active" : ""}`}
+          onClick={() => setContent("about")}
+        >
+          About
+        </button>
+        <button
+          className={`nav-button ${content === "educators" ? "active" : ""}`}
+          onClick={() => setContent("educators")}
+        >
+          Educators
+        </button>
+        <button
+          className={`nav-button ${content === "features" ? "active" : ""}`}
+          onClick={() => setContent("features")}
+        >
+          Features
+        </button>
+        <button
+          className={`nav-button ${content === "blogs" ? "active" : ""}`}
+          onClick={() => setContent("blogs")}
+        >
+          Dev Blogs
+        </button>
+        <button
+          className={`nav-button ${content === "team" ? "active" : ""}`}
+          onClick={() => setContent("team")}
+        >
+          Team
+        </button>
+        <button
+          className={`nav-button ${content === "credits" ? "active" : ""}`}
+          onClick={() => setContent("credits")}
+        >
+          Credits
+        </button>
+      </nav>
 
       <main className="main-content">
         {renderContent()}
