@@ -29,10 +29,7 @@ function App() {
       case "about":
         return (
           <div className="center-div">
-            <Title/ >
-            <div style={{
-                height: "260px",
-            }}></div>
+            <Title scrollPositionHeader={scrollPositionHeader} text="Ecology Education Enhanced"/>
             <div className="content-box">
               <h2>Discover the Great Lakes in Virtual Reality</h2>
               <div style={{ 
@@ -61,12 +58,13 @@ function App() {
                 left: `${(1.4*scrollPositionGlobal-400)%900}px`,
               }}/>
               <img src="/images/bird/bird-wing-1.png" alt="2" className="bird" style={{
-                transform: `scaleY(${scrollPositionGlobal/900})`,
+                top: `${-9+Math.sin(scrollPositionGlobal/50)*10}px`,
+                transform: `scaleY(${Math.sin(scrollPositionGlobal/50)})`,
                 left: `${(1.4*scrollPositionGlobal-400)%900}px`,
               }}/>
               <img src="/images/bird/bird-wing-2.png" alt="3" className="bird" style={{
-                top: `-5px`,
-                transform: `scaleY(${scrollPositionGlobal/900})`,
+                top: `${-8-Math.sin(scrollPositionGlobal/50)*7}px`,
+                transform: `scaleY(-${Math.sin(scrollPositionGlobal/50)})`,
                 left: `${(1.4*scrollPositionGlobal-400)%900}px`,              
               }}/>
             </div>
@@ -88,7 +86,6 @@ function App() {
             </div>
             <div className="animal-container">
               <img src="/images/fish.png" alt="1" className="bird" style={{
-                // transform: `scaleX(-1) skew(-${Math.sin(scrollPositionGlobal/50)*30}deg, ${Math.sin(scrollPositionGlobal/50)*30}0deg)`,
                 transform: `scaleX(-1) 
                             skew(${Math.sin(scrollPositionGlobal/50)*15}deg, ${Math.sin(scrollPositionGlobal/50)*10}deg) 
                             rotate(${Math.cos(scrollPositionGlobal/50)*20}deg) `,
@@ -120,31 +117,7 @@ function App() {
       case "educators":
         return (
           <div className="center-div">
-            <div 
-              style={{
-                position: "fixed",
-                borderRadius: `${(1-scrollPositionHeader)*80}px`,
-                // width: `${900+scrollPositionHeader*(1030-900)}px`,
-                width: `calc(${83+scrollPositionHeader*(98-83)}% - ${leftMargin}px)`,
-                height: `${200-scrollPositionHeader*50}px`,
-                boxShadow: `0px 4px 8px rgba(0, 0, 0, ${scrollPositionHeader*0.2})`,
-                transform: `translateY(${-scrollPositionHeader*100}px)`,
-                background: `radial-gradient(circle, rgba(22, 88, 126, ${scrollPositionHeader}) 87%, rgba(255, 255, 255, ${scrollPositionHeader*0}) 95%)`,
-              }}
-            >
-              <h1 
-                style={{
-                  marginTop: `${55+scrollPositionHeader*25}px`,
-                  fontSize: `${3.8-scrollPositionHeader*(3.8-2)}rem`,
-                  textShadow: `0px ${1+2*(1-scrollPositionHeader)}px ${1+2*(1-scrollPositionHeader)}px #000`,
-                }}
-              >
-                Educators
-              </h1>
-            </div>
-            <div style={{
-                height: "260px",
-            }}></div>
+            <Title scrollPositionHeader={scrollPositionHeader} text="Educators"/>
             <h1>Purchase</h1>
             <div class="educator-grid">
               <div class="content-box">
