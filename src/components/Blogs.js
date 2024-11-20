@@ -31,7 +31,7 @@ function Blogs({ scrollPositionHeader}) {
         <div>
             <div className="content-box">
                 <h2 className="dev-blog-header">Dev Blog 11/13 - 11/20: Second Week</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hhkCj4we0bE?si=6PIzMmrsmL1iW4kX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aEiM-KU-J4Y?si=QqeKYHGtFm_wGFsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <p className="dev-blog-text">
                 In our second week, we aimed to develop our experience to the point where the 
                 user would have a stronger sense of the environment of the game and the 
