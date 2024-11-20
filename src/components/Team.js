@@ -35,7 +35,9 @@ function Team({ scrollPositionHeader}) {
             </div>
 
             <div class="profile-card">
-            <img src="/images/JohnOyter.jpg" alt="YiHao Geng" class="profile-image"/>
+            <img src="/images/yihao-geng.jpg" alt="YiHao Geng" class="profile-image" style={{
+                objectPosition: "50% 20%", /* custom shift, particular to image */
+            }}/>
             <div class="profile-info">
                 <h3>YiHao Geng</h3>
                 <p>Developer</p>
