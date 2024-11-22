@@ -1,5 +1,7 @@
 // import logo from "./logo.svg";
-import React, { useState, useEffect } from "react";
+import React, { useState
+  // , useEffect 
+} from "react";
 import "./App.css";
 import Credits from './components/Credits';
 import Team from './components/Team';
@@ -15,7 +17,7 @@ function App() {
   const [scrollPositionGlobal, setscrollPositionGlobal] = useState(0);
   
   const scrollThreshold = 20;
-  const leftMargin = 230;
+  // const leftMargin = 230;
 
   const handleScroll = (e) => {
       const { scrollTop, scrollHeight, clientHeight } = e.target;
@@ -64,9 +66,9 @@ function App() {
         }}
         onScroll={handleScroll}
     >
-      <h2 style={{ position: "fixed", color: "red" }}>
+      {/* <h2 style={{ position: "fixed", color: "red" }}>
           Scroll Position: {scrollPositionGlobal}px
-      </h2>
+      </h2> */}
       {content !== "VRvideo" && (<nav>
         <button
           className={`nav-button ${content === "about" ? "active" : ""}`}

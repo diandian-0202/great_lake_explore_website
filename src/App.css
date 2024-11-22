@@ -25,21 +25,21 @@
 
 p {
   font-size: 1.5rem;
-  text-shadow: 
-    0px 1px 1px #000;   
+  /* text-shadow: 
+    0px 1px 1px #ffffff;    */
 }
 
 li {
   text-align: left;
   font-size: 1.5rem;
   text-shadow: 
-    0px 1px 1px #000;   
+    0px 1px 1px #ffffff;   
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-image: url("./assets/2024-04-10-07-47-48-1344x896.jpg");
+  background-image: url("./assets/brighter_image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@ nav {
   margin-left: 18vw; /* Space for the sidebar CRITICAL NUMBER */
   /* padding: 0rem 2rem 2rem 2rem; top right bottom left */
   background-size: cover;
-  color: #ffffff;
+  color: rgba(0,0,0,1);
 }
 
 .center-div {
@@ -113,13 +113,15 @@ nav {
 }
 
 h2 {
-  text-shadow: 
-    0px 2px 2px #000;   
+  font-size: 2.5rem;
+  /* text-shadow: 
+    0px 2px 2px #ffffff;    */
+  padding: 0rem;
 }
 
 h3 {
-  text-shadow: 
-    0px 1.5px 1.5px #000;   
+  /* text-shadow: 
+    0px 1.5px 1.5px #ffffff;    */
 }
 
 header p {
@@ -140,18 +142,20 @@ h1 {
   text-align: center;
   font-size: 3.8rem;
   text-shadow: 0px 3px 3px #000;
+  padding: 0rem;
 }
 
 .content-box {
-  background-color: rgb(22, 88, 126);
+  background-color: rgba(162, 201, 214, 1); /* Light blue with transparency */
   border-radius: 10px;
-  max-width: 1000px; /* 增加框的最大宽度 */
   max-height: 700px;
-  margin: 2rem;
-  padding: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
-  box-shadow: 0px 0px 25px rgba(255, 255, 255, .4);
-  margin-top: 2rem;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+  margin: 2rem;
 }
 
 .dev-blog-header {

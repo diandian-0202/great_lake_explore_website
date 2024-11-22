@@ -10,8 +10,6 @@ function Title({ scrollPositionHeader, text }) {
           position: "sticky",
           borderRadius: `${(1 - scrollPositionHeader) * 80}px`,
           width: `${80 + scrollPositionHeader * (100 - 80)}%`,
-          // height: `${400 *(1 - scrollPositionHeader)+70}px`,
-          height: `${12+88*(1 - scrollPositionHeader)}vh`,
           boxShadow: `0px 4px 8px rgba(0, 0, 0, ${scrollPositionHeader * 0.2})`,
           // transform: `translateY(${-scrollPositionHeader * 100}px)`,
           background: `radial-gradient(circle, rgba(22, 88, 126, ${scrollPositionHeader}) 87%, rgba(255, 255, 255, 0) 95%)`,
