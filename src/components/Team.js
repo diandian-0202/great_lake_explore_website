@@ -1,51 +1,55 @@
-import React from 'react';
-import Title from './Title';
+import React from "react";
+import Title from "./Title";
+import "./Team.css";
 
-function Team({ scrollPositionHeader}) {
+function Team({ scrollPositionHeader }) {
+  const teamMembers = [
+    {
+      name: "John Oyer",
+      role: "Developer",
+      image: "/images/JohnOyter.jpg",
+      style: { objectPosition: "50% 15%" },
+    },
+    {
+      name: "Emerson Hodder",
+      role: "Developer",
+      image: "/images/emerson-hodder.jpg",
+    },
+    {
+      name: "DongHua Zhang",
+      role: "Developer",
+      image: "/images/donghua-zhang.jpg",
+      style: { objectPosition: "50% 30%" },
+    },
+    {
+      name: "YiHao Geng",
+      role: "Developer",
+      image: "/images/yihao-geng.jpg",
+      style: { objectPosition: "50% 20%" },
+    },
+  ];
+
   return (
-    <div className="center-div">
-        <Title scrollPositionHeader={scrollPositionHeader} text="Meet the Team"/>
-        <div class="profile-grid">
-            <div class="profile-card">
-            <img src="/images/JohnOyter.jpg" alt="John Oyer" class="profile-image" style={{
-                objectPosition: "50% 15%", /* custom shift, particular to image */
-            }}/>
-            <div class="profile-info">
-                <h3>John Oyer</h3>
-                <p>Developer</p>
+    <div className="team-container">
+      <Title scrollPositionHeader={scrollPositionHeader} text="Meet the Team" />
+      <div className="team-grid">
+        {teamMembers.map((member, index) => (
+          <div key={index} className="team-card">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="team-image"
+              style={member.style || {}}
+            />
+            <div className="team-info">
+              <h3>{member.name}</h3>
+              <p>{member.role}</p>
             </div>
-            </div>
-
-            <div class="profile-card">
-            <img src="/images/emerson-hodder.jpg" alt="Emerson Hodder" class="profile-image"/>
-            <div class="profile-info">
-                <h3>Emerson Hodder</h3>
-                <p>Developer</p>
-            </div>
-            </div>
-
-            <div class="profile-card">
-            <img src="/images/donghua-zhang.jpg" alt="DongHua Zhang" class="profile-image" style={{
-                objectPosition: "50% 30%", /* custom shift, particular to image */
-            }}/>
-            <div class="profile-info">
-                <h3>DongHua Zhang</h3>
-                <p>Developer</p>
-            </div>
-            </div>
-
-            <div class="profile-card">
-            <img src="/images/yihao-geng.jpg" alt="YiHao Geng" class="profile-image" style={{
-                objectPosition: "50% 20%", /* custom shift, particular to image */
-            }}/>
-            <div class="profile-info">
-                <h3>YiHao Geng</h3>
-                <p>Developer</p>
-            </div>
-            </div>
-        </div>
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
 export default Team;
