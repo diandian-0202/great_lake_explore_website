@@ -90,9 +90,8 @@
   width: 50px; /* 根据需要调整大小 */
   height: auto;
 }
-
-/* 内容盒子 */
-.content-box {
+/*------------------------------------------------------------------------------------------*/
+/* .content-box {
   position: relative;
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -102,21 +101,70 @@
   max-width: 800px;
   text-align: left;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-  /* 移除 top: 80%; */
+}
+
+.content-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+} */
+/*------------------------------------------------------------------------------------------*/
+
+/* 内容盒子 */
+.content-box {
+  position: relative;
+  background: linear-gradient(
+    to bottom right,
+    rgba(251, 251, 251, 0.8),
+    rgba(92, 234, 64, 0.9)
+  );
+  color: rgb(151, 86, 242);
+  margin: 7rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* 学习内容标题 */
 .content-box h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1e8fd0; /* 突出标题颜色 */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 /* 学习内容段落 */
 .content-box p {
   font-size: 1.2rem;
   line-height: 1.8;
+  color: #cb3939; /* 柔和的字体颜色 */
+  text-align: justify;
+  margin-bottom: 1.2rem;
 }
 
+/* 针对小屏幕优化 */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 1.5rem;
+  }
+
+  .content-box h2 {
+    font-size: 2rem;
+  }
+
+  .content-box p {
+    font-size: 1rem;
+  }
+}
+/*------------------------------------------------------------------------------------------*/
 /* 视频占位符 */
 .video-placeholder {
   background: rgba(255, 255, 255, 0.3);
@@ -135,4 +183,58 @@
   width: 100%;
   height: auto; /* 允许容器根据内容扩展高度 */
   overflow: visible; /* 允许内容溢出并滚动 */
+}
+
+/*-------------------------new box-----------------------------------------------------*/
+
+/* 高科技感内容盒子 */
+.high-tech-box {
+  position: relative;
+  background: linear-gradient(135deg, #777b73, #203a43, #2c5364);
+  color: #ffffff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 悬停效果 */
+.high-tech-box:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+/* 标题样式 */
+.high-tech-box h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00ffff; /* 使用亮蓝色标题 */
+  text-shadow: 0 2px 10px rgba(0, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* 文本段落 */
+.high-tech-box p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0; /* 柔和字体颜色 */
+  text-align: justify;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .high-tech-box {
+    padding: 1.5rem;
+  }
+
+  .high-tech-box h2 {
+    font-size: 2rem;
+  }
+
+  .high-tech-box p {
+    font-size: 1rem;
+  }
 }

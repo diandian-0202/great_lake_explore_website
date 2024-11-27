@@ -61,17 +61,12 @@ function App() {
           >
             About
           </button>
-          <button
-            className={`nav-button ${content === "features" ? "active" : ""}`}
-            onClick={() => setContent("features")}
-          >
-            Features
-          </button>
+
           <button
             className={`nav-button ${content === "educators" ? "active" : ""}`}
             onClick={() => setContent("educators")}
           >
-            Educators
+            Purchase
           </button>
           <button
             className={`nav-button ${content === "blogs" ? "active" : ""}`}

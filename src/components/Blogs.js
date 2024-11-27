@@ -10,7 +10,7 @@ function Blogs({ scrollPositionHeader }) {
       /> */}
       <h1 className="centered-title">Development Blogs</h1>
       <div>
-        <div className="content-box">
+        <div className="high-tech-box">
           <h2 className="dev-blog-header">Dev Blog 11/6 - 11/13: First Week</h2>
           <iframe
             width="560"
@@ -43,7 +43,8 @@ function Blogs({ scrollPositionHeader }) {
         </div>
       </div>
       <div>
-        <div className="content-box">
+        {/* ----------------------------------------------------------------------------------------------------------*/}
+        <div className="high-tech-box">
           <h2 className="dev-blog-header">
             Dev Blog 11/13 - 11/20: Second Week
           </h2>
@@ -69,6 +70,43 @@ function Blogs({ scrollPositionHeader }) {
             our world, and enhanced the landscape through modeling and the
             addition of trees. The user also has the ability to teleport between
             lakes, and information appears when the user catches a fish.
+          </p>
+        </div>
+        {/* ----------------------------------------------------------------------------------------------------------*/}
+        {/* ----------------------------------------------------------------------------------------------------------*/}
+        <div className="high-tech-box">
+          <h2 className="dev-blog-header">
+            Dev Blog 11/20 - 11/26: Third Week
+          </h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/xHgbErBsiqk"
+            title="EECS 440 - P3 Alpha"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p className="dev-blog-text">
+            This week, we aimed to complete the majority of our VR experience.
+            We playtested with another team and received valuable feedback from
+            them, and also interviewed two teachers of young students who gave
+            us insight into important components of educational products. With
+            this advice, we had a clear idea of what our game was missing and
+            also what was working well and should be developed further.
+          </p>
+          <p className="dev-blog-text">
+            During our development, we added distinct scenery and environmental
+            elements for each location, so that the player would instantly have
+            a sense of the theme of the location upon teleporting there. We
+            added interaction between animals in our game that mirrored the
+            processes of the food chain that the player would learn about. We
+            added rain and snow controls, and new types of animals in these
+            alternate conditions. We also added more animal information as we
+            introduced more animals into the game based on our planned food
+            chain structure. Finally, we fixed a number of bugs and quality of
+            life issues.
           </p>
         </div>
       </div>

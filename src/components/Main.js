@@ -58,9 +58,8 @@ function Main({ scrollPositionHeader, scrollPositionGlobal }) {
         />
       </div>
 
-      <div className="content-box">
+      <div className="high-tech-box">
         <h2>Immersive and Informative</h2>
-        <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
         <p>
           Learning about ecosystems is challenging: there is a lot to remember,
           and keeping focused isn’t always easy. Students spend all day learning
@@ -94,23 +93,6 @@ function Main({ scrollPositionHeader, scrollPositionGlobal }) {
             }px`,
           }}
         />
-      </div>
-
-      <div className="content-box">
-        <h2>Immersive and Informative</h2>
-        <div className="video-placeholder">{/* 这里可以嵌入视频 */}</div>
-        <p>
-          Learning about ecosystems is challenging: there is a lot to remember,
-          and keeping focused isn’t always easy. Students spend all day learning
-          through lectures, worksheets and tests, and keeping their attention is
-          never guaranteed.
-        </p>
-        <p>
-          In the Great Lakes VR experience, everywhere you explore will present
-          an opportunity for learning. Students’ natural curiosity will keep
-          them constantly engaged, and they’ll be learning everything they need
-          to know.
-        </p>
       </div>
     </div>
   );
