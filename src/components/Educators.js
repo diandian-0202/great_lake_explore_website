@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import "./Blogs.css"; //fix fix fix
-function Blogs({ scrollPositionHeader }) {
+function Educators({ scrollPositionHeader }) {
   return (
     <div className="center-div">
       {/* <Title scrollPositionHeader={scrollPositionHeader} text="For Educators" /> */}
@@ -47,4 +47,4 @@ function Blogs({ scrollPositionHeader }) {
   );
 }
 
-export default Blogs;
+export default Educators;

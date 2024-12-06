@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="app" onScroll={handleScroll}>
       <header className="navbar">
-        <div className="logo"> Studio 1</div>
+        <div className="logo"> </div>
         <nav className="nav-links">
           <button
             className={`nav-button ${content === "about" ? "active" : ""}`}

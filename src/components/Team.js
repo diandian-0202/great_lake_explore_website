@@ -1,5 +1,3 @@
-import React from "react";
-import Title from "./Title";
 import "./Team.css";
 
 function Team({ scrollPositionHeader }) {
@@ -31,19 +29,21 @@ function Team({ scrollPositionHeader }) {
 
   return (
     <div className="team-container">
-      <Title scrollPositionHeader={scrollPositionHeader} text="Meet the Team" />
+      <h1 className="centered-title">Our Development Team</h1>
       <div className="team-grid">
         {teamMembers.map((member, index) => (
           <div key={index} className="team-card">
-            <img
-              src={member.image}
-              alt={member.name}
-              className="team-image"
-              style={member.style || {}}
-            />
+            <div className="image-wrapper">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="team-image"
+                style={member.style || {}}
+              />
+            </div>
             <div className="team-info">
-              <h3>{member.name}</h3>
-              <p>{member.role}</p>
+              <h3 className="team-name">{member.name}</h3>
+              <p className="team-role">{member.role}</p>
             </div>
           </div>
         ))}

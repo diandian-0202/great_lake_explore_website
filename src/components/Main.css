@@ -123,7 +123,7 @@
     rgba(92, 234, 64, 0.9)
   );
   color: rgb(151, 86, 242);
-  margin: 7rem auto;
+  margin: 2rem auto;
   padding: 2rem;
   border-radius: 16px;
   max-width: 800px;
@@ -237,4 +237,126 @@
   .high-tech-box p {
     font-size: 1rem;
   }
+}
+/*-------------------------trailer box-----------------------------------------------------*/
+
+/* 黑色背景部分样式 */
+.trailer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #121212, #333333); /* 黑色背景 */
+  padding: 180px 50px; /* 增大背景区域 */
+  color: #fff; /* 白色文字 */
+}
+
+.trailer-content {
+  display: flex;
+  max-width: 1400px; /* 增加整体宽度 */
+  width: 100%;
+}
+
+.trailer-text {
+  flex: 1;
+  padding: 20px 40px;
+}
+
+.trailer-text h2 {
+  font-size: 2.5rem; /* 加大标题字体 */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.trailer-text p {
+  font-size: 1.5rem; /* 加大段落字体 */
+  line-height: 2;
+  font-style: italic; /* 添加高端感 */
+}
+
+.trailer-video-wrapper {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer-video {
+  border-radius: 15px; /* 视频圆角 */
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.3); /* 高级阴影效果 */
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------ */
+.authorization-section {
+  background-color: #000; /* 黑色背景 */
+  color: #fff; /* 白色文字 */
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.authorization-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00bfff; /* 高端蓝色标题 */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* 链接间距 */
+  margin-bottom: 30px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bfff; /* 悬停时的高亮颜色 */
+}
+
+.team-info {
+  margin-bottom: 30px;
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+.team-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-info li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.team-info a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.team-info a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #aaa;
 }

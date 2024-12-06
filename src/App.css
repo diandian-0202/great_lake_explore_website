@@ -4,7 +4,8 @@ body {
   font-family: "Arial", sans-serif;
   overflow-y: auto; /* 启用滚动 */
   overflow-x: hidden;
-  background-color: #f9f9f9; /* 背景颜色 */
+  /* background-color: #f9f9f9; 背景颜色 */
+  background: #3d3434;
   box-sizing: border-box; /* 确保边框和内容正确计算宽度 */
 }
 

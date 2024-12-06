@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Main.css";
 
 function Main({ scrollPositionHeader, scrollPositionGlobal }) {
+  const trailerVideoRef = useRef(null);
+
+  const handleLearnMoreClick = () => {
+    if (trailerVideoRef.current) {
+      trailerVideoRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="main-container">
       {/* 视频部分 */}
       <div className="video-section">
         <video
           className="background-video"
-          src="/videos/greatlakevideo.mp4"
+          src="/videos/video2.mp4"
           autoPlay
           loop
           muted
@@ -21,13 +29,11 @@ function Main({ scrollPositionHeader, scrollPositionGlobal }) {
             local fish, birds, and other animals, watch the seasons change, and
             experience how the water cycle affects ecosystems, all in real time.
           </p>
-          <a href="https://www.nwf.org/Educational-Resources/Wildlife-Guide/Wild-Places/Great-Lakes">
-            Learn More
-          </a>
+          <button onClick={handleLearnMoreClick}>Learn More</button>
         </div>
       </div>
 
-      <div className="animal-container">
+      {/* <div className="animal-container">
         <img
           src="/images/bird/bird-main.png"
           alt="1"
@@ -56,44 +62,68 @@ function Main({ scrollPositionHeader, scrollPositionGlobal }) {
             left: `${(1.4 * scrollPositionGlobal - 400) % 900}px`,
           }}
         />
+      </div> */}
+      {/* 黑色背景部分 */}
+      <div ref={trailerVideoRef} className="trailer-section">
+        <div className="trailer-content">
+          {/* 左侧文字 */}
+          <div className="trailer-text">
+            <h2>Immerse Yourself in Learning</h2>
+            <p>
+              In the Great Lakes VR experience, everywhere you explore will
+              present an opportunity for learning. Students’ natural curiosity
+              will keep them constantly engaged, and they’ll be learning
+              everything they need to know.
+            </p>
+          </div>
+          {/* 右侧视频 */}
+          <div className="trailer-video-wrapper">
+            <video
+              className="trailer-video"
+              src="/videos/market.mp4"
+              controls
+              style={{ width: "100%" }}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="high-tech-box">
-        <h2>Immersive and Informative</h2>
-        <p>
-          Learning about ecosystems is challenging: there is a lot to remember,
-          and keeping focused isn’t always easy. Students spend all day learning
-          through lectures, worksheets and tests, and keeping their attention is
-          never guaranteed.
-        </p>
-        <p>
-          In the Great Lakes VR experience, everywhere you explore will present
-          an opportunity for learning. Students’ natural curiosity will keep
-          them constantly engaged, and they’ll be learning everything they need
-          to know.
-        </p>
-      </div>
-
-      <div className="animal-container">
-        <img
-          src="/images/fish.png"
-          alt="1"
-          className="fish"
-          style={{
-            transform: `scaleX(-1) 
-                        skew(${Math.sin(scrollPositionGlobal / 50) * 15}deg, ${
-              Math.sin(scrollPositionGlobal / 50) * 10
-            }deg) 
-                        rotate(${
-                          Math.cos(scrollPositionGlobal / 50) * 20
-                        }deg) `,
-            top: `${-10 + Math.sin(scrollPositionGlobal / 50) * 30}px`,
-            right: `${
-              20 + ((((1.4 * scrollPositionGlobal - 330) % 900) + 900) % 900)
-            }px`,
-          }}
-        />
-      </div>
+      <footer className="authorization-section">
+        <div className="authorization-content">
+          <h2 className="footer-title">Great Lakes VR Project</h2>
+          <nav className="footer-links">
+            <a href="https://www.eecs440.com/">Privacy Policy</a>
+            <a href="https://www.eecs440.com/">Terms of Service</a>
+            <a href="https://www.eecs440.com/">About Us</a>
+            <a href="https://www.eecs440.com/">Help Center</a>
+          </nav>
+          <div className="team-info">
+            <h3>Web Developers:</h3>
+            <ul>
+              <li>
+                Donghua Zhang -{" "}
+                <a href="mailto:donghua@umich.edu">donghua@umich.edu</a>
+              </li>
+              <li>
+                John Oyer -{" "}
+                <a href="mailto:johnoyer@umich.edu">johnoyer@umich.edu</a>
+              </li>
+              <li>
+                Yihao Geng -{" "}
+                <a href="mailto:yhgeng@umich.edu">yhgeng@umich.edu</a>
+              </li>
+              <li>
+                Emerson Hodder -{" "}
+                <a href="mailto:hodder@umich.edu">hodder@umich.edu</a>
+              </li>
+            </ul>
+          </div>
+          <p className="copyright">
+            Copyright © {new Date().getFullYear()} Great Lakes VR. All Rights
+            Reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
